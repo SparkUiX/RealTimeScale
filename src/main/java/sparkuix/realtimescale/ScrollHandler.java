@@ -12,7 +12,6 @@ import org.lwjgl.glfw.GLFW;
 @Mod.EventBusSubscriber
 public class ScrollHandler {
     private static double scrollValue=2;
-
     @SubscribeEvent
     public void changeGui(ScreenOpenEvent event) {
         RealTimeScaleConfig realTimeScaleConfig = new RealTimeScaleConfig();

@@ -145,7 +145,7 @@ public class RealTimeScaleConfig {
 
         // 如果文件不存在，则在 map 中仅保留默认缩放值
         if (!Files.exists(filePath)) {
-            dataMap.put(DEFAULT_SCALE_KEY, 1.00);
+            dataMap.put(DEFAULT_SCALE_KEY, 4.00);
             return dataMap;
         }
 
@@ -182,7 +182,7 @@ public class RealTimeScaleConfig {
         }
 
         // 如果 map 中没有默认缩放值，手动添加一个
-        dataMap.putIfAbsent(DEFAULT_SCALE_KEY, 1.00);
+        dataMap.putIfAbsent(DEFAULT_SCALE_KEY, 4.00);
 
         return dataMap;
     }
