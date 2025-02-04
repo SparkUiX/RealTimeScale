@@ -2,6 +2,7 @@ package sparkuix.realtimescale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.*;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
+import net.minecraft.client.gui.screens.worldselection.CreateWorldScreen;
 import net.minecraft.client.gui.screens.worldselection.SelectWorldScreen;
 import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.client.event.ScreenOpenEvent;
@@ -25,7 +26,7 @@ public class ScrollHandler {
             GuiScaleHelper.setGuiScale(defaultScale);
             System.out.println("所有GUI都已关闭");
         } else
-        if(!(eventScreen instanceof TitleScreen || eventScreen instanceof SelectWorldScreen || eventScreen instanceof GenericDirtMessageScreen || eventScreen instanceof ProgressScreen || eventScreen instanceof ReceivingLevelScreen || eventScreen instanceof LevelLoadingScreen||eventScreen instanceof CreativeModeInventoryScreen))
+        if(!(eventScreen instanceof TitleScreen || eventScreen instanceof SelectWorldScreen || eventScreen instanceof GenericDirtMessageScreen || eventScreen instanceof ProgressScreen || eventScreen instanceof ReceivingLevelScreen || eventScreen instanceof LevelLoadingScreen||eventScreen instanceof CreativeModeInventoryScreen||eventScreen instanceof CreateWorldScreen))
         {
             double customScale=realTimeScaleConfig.readCustomScale(event.getScreen().getClass().toString());
             scrollValue=customScale;
